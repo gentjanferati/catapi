@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import Nav from "./components/nav/nav";
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import './App.css';
+import Upload from './components/upload/upload';
+import Home from './components/home/home';
+import {useSelector} from 'react-redux';
 
 function App() {
+  const stat = useSelector(state => state.responseStatus.status)
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>
+      <Switch>
+        <Route path="/upload" render={()=> stat ? (<Redirect to='/'/>) : (<Upload/>)}/>
+        <Route path="/" component={Home}/>
+      </Switch>
     </div>
+    </Router>
   );
 }
 
