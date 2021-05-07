@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Card from '../card/card';
-
+import './home.styles.css';
 const Home = ()=>{
     const [images, setImages] = useState();
     const [isLoaded, setIsLoaded] = useState(false);
@@ -31,12 +31,14 @@ const Home = ()=>{
         )
     } 
     else {
-    return (
+    return (<div>
+        <h1>Your Lovely Cats</h1>
         <div className="container">
         <div className="row">
             {images.map(({...otherProps}) => (
                 <Card key={Math.round(Math.random() * 50000)} {...otherProps}/>
             ))}
+        </div>
         </div>
         </div>
     )}

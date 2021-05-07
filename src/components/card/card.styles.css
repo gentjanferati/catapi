@@ -1,13 +1,14 @@
   
 .card-container {
-    width: 300px;
-    height: 400px;
+    width: 334px;
+    height: 403px;
     display: flex;
     flex-direction: column;
-    background-color: #03503E;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 28px;
+
+    
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
@@ -17,15 +18,73 @@
   }
   .img-cont {
     overflow: hidden;
+    border-radius: 12p;
+    margin-top: 38px;
+    
   }  
   .card-container:hover {
     transform: scale(1.05);
   }
   
   span {
-      margin: 5px;
-      background-color: aqua;
-      padding: 3px;
-      border-radius: 2px;
+      text-align: center;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin: 10px;
+      padding: 5px 20px 5px 20px;
+      border-radius: 4px;
   }
- 
+  .fav {
+      color:  #BF000099;
+      ;
+
+  }
+
+  p{
+      margin: 0;
+      font-family: 'Itim', cursive;
+  }
+  .like{
+    background: #D4FFB1;
+    border-radius: 8px;
+  }
+  .dislike{
+    background: #FFD7B1;
+    border-radius: 8px;
+  }
+  h3{
+    font-family: 'Itim', cursive;
+  }
+
+  img{
+    border-radius: 5px;
+  }
+
+  .oval{
+      position: absolute;
+      right: 28px;
+      top: 238px;
+      background-color: white;
+      width: 69px;
+      height: 69px;
+      border-radius: 35px;
+      z-index: 99;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .actions{
+      display: flex;
+      justify-items: center;
+      margin-left: 28px;
+  }
+
+  .score{
+      display: flex;
+      align-items: center;
+      margin-left: 38px;
+  }

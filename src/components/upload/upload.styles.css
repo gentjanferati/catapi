@@ -1,0 +1,39 @@
+h1{
+    font-family: 'Itim', cursive;
+}
+input {
+    font-family: 'Itim', cursive;
+    background-color: #F6F6F6 ;
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px;
+    border-radius: 5px;
+    border-color: black;
+    margin-left: 10px;
+}
+.input-file{
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 98%;
+  width: 98%;
+  opacity: 0;
+}
+.upload-wraper{
+    
+display: flex;
+justify-items: center;
+align-items: center;
+width: 350px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 30%;
+transform: translate(-50%,-50%);
+}
+
